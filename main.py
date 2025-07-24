@@ -50,9 +50,5 @@ async def generate_lesson_endpoint(request: LessonRequest):
 
 @app.get("/")
 def read_root():
-    return {"message": "Server Proyek Pelita berjalan! Gunakan endpoint /generate-lesson untuk membuat pelajaran."}
-
-if __name__ == "__main__":
-    import uvicorn
-    port = int(os.environ.get("PORT", 8080))
-    uvicorn.run("main:app", host="0.0.0.0", port=port)
+    return {"message": "Server Proyek Pelita berjalan! Gunakan endpoint /generate-lesson untuk membuat pelajaran."
+    }

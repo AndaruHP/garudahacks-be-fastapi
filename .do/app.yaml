@@ -1,0 +1,12 @@
+name: be-fastapi
+services:
+  - name: web
+    environment_slug: python
+    instance_size_slug: basic-xxs
+    instance_count: 1
+    routes:
+      - path: /
+    run_command: "python main.py"  # ⬅️ penting!
+    envs:
+      - key: GOOGLE_API_KEY
+        type: SECRET
